@@ -1,0 +1,52 @@
+
+<div class="heder">
+    <app-nav-bar class="nav-bar"></app-nav-bar>
+    <div class="content-heder">
+        <div class="price">
+            <div class="sale">Save 90%</div>
+            <div class="account">Get account of $59<span class="material-symbols-outlined icon">chevron_right</span></div>
+        </div>
+        <div class="title">Manage the team everyone wants to be on</div>
+        <div class="description">Simple platform that lets you master what great managers do best as develop trust, collaborate, and drive team performance.</div>
+        <div class="input">
+            <input class="email" type="email" placeholder="name@yourcompany.com">
+            <div class="button">Try it free</div>
+        </div>
+        <img class="graph-heder" src="/assets/graph-heder.png">
+        <div class="subtitle">TRUSTED BY OVER <span class="text-bold">10.000+</span> WORLD'S BEST TEAMS</div>
+        <div class="partners">
+            <img *ngFor="let p of partnersService.partners" class="lg" [src]="p">
+        </div>
+    </div>
+</div>
+<app-section-with-title bg="rgba(251, 250, 254, 1)">
+    <div class="row-content">
+        <img class="timeline" src="/assets/timeline.png">
+        <div class="cards">
+            <app-card title="Survey your team" description="Powerful questions that get to the heart of how team members really feel."></app-card>
+            <app-card title="Resolve issues quickly" description="Anonymous messaging that connects managers and employees."></app-card>
+            <div class="border"></div>
+            <app-card title="Plan your 1-on-1s" description="Plan meetings together and give a stake employees and teams."></app-card>
+            <div class="border"></div>
+            <app-card title="Track your progress" description="Easy-to-read reports and sharable results help managers and teams."></app-card>
+        </div>
+    </div>
+</app-section-with-title>
+<app-section-with-title title="Make your work easier">
+    <div class="work-cards">
+        <app-work-card *ngFor="let b of getBenefits()" [icon]="b.icon" [title]="b.title" [description]="b.description"></app-work-card>
+        <div (click)="viewMore()" class="btn">View more benefits</div>
+    </div>
+</app-section-with-title>
+<app-section-with-title [isRow]="true"  title="We work how you work everyday" description="Since the easiest things to use actually get used, we adapts to the way your team works - not the other way around." button="Get started free">
+    <img class="graph-section" src="/assets/graph-section.png">
+</app-section-with-title>
+<app-section-with-title title="Why customers love working with us" description="“It's amazing what has helped me learn about my team.I don't worry about blindspots anymore, and 1-on-1s have never been more productive. The team loves it.”">
+    <div class="people-cards">
+        <app-people-card *ngFor="let p of peopleService.people" [photo]="p.photo" [name]="p.name" [function]="p.function"></app-people-card>
+    </div>
+        <app-section class="section"></app-section>
+</app-section-with-title>
+<app-footer></app-footer>
+
+<!-- <div *ngFor="let f of getFruits()" >{{f}}</div> -->

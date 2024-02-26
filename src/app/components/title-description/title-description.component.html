@@ -1,0 +1,5 @@
+<div *ngIf="title||description||button" [ngClass]="{left:alignLeft}" class="content">
+    <div *ngIf="title" class="title">{{title}}</div>
+    <div *ngIf="description" class="description">{{description}}</div>
+    <div *ngIf="button" class="button">{{button}}</div>
+</div>

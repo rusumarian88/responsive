@@ -1,0 +1,32 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+}
+
+.card{
+    width: 100%;
+}
+
+
+.icon{
+    height: 64px;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    color: rgba(53, 65, 75, 1);
+    padding-top: 24px;
+}
+
+.description{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(78, 90, 101, 1);
+    padding-top: 8px;
+}

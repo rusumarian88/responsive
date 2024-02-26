@@ -1,0 +1,51 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: inline-block;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    align-items: stretch;
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .card{
+      flex-direction:column-reverse;
+    }
+}
+
+.bar{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 8px;
+    background-color:transparent;
+}
+
+.card:hover .bar{
+    background-color:  rgba(121, 76, 255, 1);
+}
+
+.content{
+    padding: 24px 28px;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    color: rgba(53, 65, 75, 1);
+}
+
+.description{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(78, 90, 101, 1);
+    padding-top: 10px;
+}

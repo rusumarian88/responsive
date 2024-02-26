@@ -1,0 +1,25 @@
+
+@import "mixins";
+@import "variables";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    --title-font-size:64px;
+    --title-small-font-size:40px;
+    --font-small:16px;
+}
+
+*{
+    font-family: 'Inter',sans-serif;
+}
+
+@media (max-width:520px){
+    body{
+        --title-big-font-size:32px;
+        --font-small:11px;
+        --title-small-font-size:24px;
+    }
+}

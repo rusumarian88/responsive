@@ -1,0 +1,10 @@
+<div [ngStyle]="{background:bg}" class="section">
+    <div [ngClass]="{row:isRow}" class="content">
+        <div>
+            <app-title-description [alignLeft]="isRow" [title]="title" [description]="description" [button]="button"></app-title-description>
+        </div>
+        <div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

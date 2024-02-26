@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/responsive",
+    "site":"respons",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

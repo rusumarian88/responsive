@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="bar"></div>
+    <div class="content">
+        <div *ngFor="let p of photo" class="photo" [ngStyle]="{'background-image':'url('+p+')'}"></div>
+        <div class="text">
+            <div class="name">{{name}}</div>
+            <div class="function">{{function}}</div>
+        </div>
+    </div>
+</div>
